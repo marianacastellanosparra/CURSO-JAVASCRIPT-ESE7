@@ -113,3 +113,43 @@ console.log(a ?? c); // "default" (porque a es null)
 //  a diferencia de || que considera falsy (como 0, "", false) como valores que también activan el valor predeterminado.
 
 console.log(0 || "default"); // "default" (porque 0 es falsy)
+
+// D. Template strings 
+
+const ingreso = 5000000;
+const gasto = 450000;
+const balance = ingreso - gasto; 
+
+const mensaje = `El balance es: ${balance}`; // Usamos ${} para insertar la expresión balance dentro de la cadena
+console.log(mensaje); // Imprime: El balance es: 4550000    
+
+console.log(`El ingreso es: ${ingreso}, el gasto es: ${gasto}, y el balance es: ${balance}`);
+
+
+// F. CONTROL DE FLUJO: if, else, switch, for, while, do while
+// EJEMPLO IF ELSE
+
+const edad = 18;
+
+if (edad >= 18) {
+    console.log("Eres mayor de edad");
+} else {
+    console.log("Eres menor de edad");
+}
+
+console.log(edad >= 18 ? "Eres mayor de edad" : "Eres menor de edad"); // operador ternario
+
+// for loop
+
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+
+const gastos = [100, 200, 300];
+let totalGastos = 0;
+
+for (let i = 0; i < gastos.length; i++) {
+    totalGastos += gastos[i]; // totalGastos = totalGastos + gastos[i];
+}
+
+console.log(`Total de gastos: ${totalGastos}`);
