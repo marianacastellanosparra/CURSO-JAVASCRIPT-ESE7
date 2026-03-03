@@ -2,7 +2,6 @@
 // CONVERSOR INTERACTIVO
 // ==============================
 
-
 const readline = require("readline"); // Módulo para lectura interactiva desde consola
 
 const rl = readline.createInterface({ // Crear interfaz de lectura
