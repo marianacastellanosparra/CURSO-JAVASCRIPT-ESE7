@@ -2,11 +2,12 @@
 // CONVERSOR INTERACTIVO
 // ==============================
 
+
 const readline = require("readline"); // Módulo para lectura interactiva desde consola
 
 const rl = readline.createInterface({ // Crear interfaz de lectura
     input: process.stdin,    // Entrada estándar (teclado)
-    output: process.stdout   // Salida estándar (consola)
+    output: process.stdout   // Salida estándar (consola) 
 });
 
 const temperatura = ["C", "F", "K"];  // Unidades de temperatura soportadas
@@ -16,14 +17,13 @@ function convertir(value, from, to) {   // Función para convertir entre unidade
 
     // Validar número
     if (!Number.isFinite(value)) {  // Verificar que el valor sea un número finito
-        return "❌ Error: valor inválido";  // Retornar mensaje de error si no es un número válido
+        return "❌ Error: el valor ingresado debe ser un número finito (no texto ni infinito).";  // Retornar mensaje de error si no es un número válido
     }
 
     // Validar unidades soportadas
     if (![...temperatura, ...longitud].includes(from) ||  // Verificar que la unidad de origen esté en las listas de unidades soportadas
         ![...temperatura, ...longitud].includes(to)) {  // Verificar que la unidad de destino esté en las listas de unidades soportadas
-        return "❌ Error: unidad no soportada";
-    }
+        return "❌ Error: unidad no válida. Solo se permiten unidades de temperatura (C, F, K) o longitud (m, km, cm).";    }
 
     // Validar misma categoría
     const esTemp = temperatura.includes(from) && temperatura.includes(to);   // Verificar que ambas unidades sean de la categoría de temperatura
@@ -52,7 +52,7 @@ function convertir(value, from, to) {   // Función para convertir entre unidade
     if (esLong) {  // Si ambas unidades son de longitud, realizar la conversión
         let metros;   // Variable intermedia para convertir a metros
 
-        if (from === "m") metros = value;
+        if (from === "m") metros = value;  
         if (from === "km") metros = value * 1000;
         if (from === "cm") metros = value / 100;
 
@@ -70,7 +70,7 @@ function convertir(value, from, to) {   // Función para convertir entre unidade
 
 rl.question("Ingrese valor: ", (valorInput) => {  // Preguntar al usuario por el valor a convertir
 
-    const value = Number(valorInput);b  // Convertir el valor ingresado a número
+    const value = Number(valorInput);  // Convertir el valor ingresado a número
 
     rl.question("Ingrese unidad origen (C, F, K, m, km, cm): ", (from) => {  // Preguntar al usuario por la unidad de origen
 
