@@ -40,7 +40,7 @@ const expenses = [
   { amount: 20, category: "transport" },
   { amount: 30, category: "food" },
 ];
-// filter 
+// filter
 
 const foodExpenses = expenses.filter((expense) => expense.category === "food"); 
 // filter crea un nuevo array con los elementos que cumplen la condición
