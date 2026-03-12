@@ -2,7 +2,7 @@
 
 // Funciones setup + validaciones base
 
-function toNumberString(value, label = "Valor") {// Esta función se encarga de convertir un valor a número y verificar que sea un número válido. Si el valor no es un número válido, lanza un error con un mensaje que indica que el valor debe ser un número válido.
+function toNumberString(value, label = "Valor") {// Esta función se encarga de convertir un valor a número y verificar que sea un número válido. Si el valor no es un número válido, lanza un error con un mensaje que indica que el valor debe ser un número válido .
     const n = Number(value);
   if (!Number.isFinite(n)) { // Number.isFinite() es un método que se utiliza para verificar si un valor es un número finito. Si el valor no es un número finito (por ejemplo, si es NaN, Infinity o -Infinity), la función lanza un error con un mensaje que indica que el valor debe ser un número válido.
     throw new Error(`${label} debe ser un número válido`);
