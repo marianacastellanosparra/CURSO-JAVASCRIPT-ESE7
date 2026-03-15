@@ -158,8 +158,8 @@ function printReport(expenses) {
   console.log("Resumen:");
   console.table([
     {
-      Total: formatCOP(stats.total),
-      Promedio: formatCOP(stats.promedio),
+      Total: formatCOP(stats.total), // Aquí se muestra el total acumulado de gastos, formateado como moneda colombiana (COP).
+      Promedio: formatCOP(stats.promedio), 
       Minimo: formatCOP(stats.minimo),
       Maximo: formatCOP(stats.maximo),
       Registros: expenses.length,
