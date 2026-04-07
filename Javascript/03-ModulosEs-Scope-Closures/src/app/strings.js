@@ -16,6 +16,7 @@ function toNoEmptyString (value, label = 'texto') { // Validar que el valor es u
 
 }
     
+
 // si esta vacio lanza un error
 
 //funcion titleCase, funcion que perASEmite convertir un string a titulo
